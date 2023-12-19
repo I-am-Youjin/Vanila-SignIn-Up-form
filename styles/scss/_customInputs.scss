@@ -1,0 +1,87 @@
+.input_container {
+  position: relative;
+  .label {
+    position: absolute;
+    top: -6px;
+    left: 21px;
+    color: #446eda;
+    font-family: "Raleway";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    background-color: #fff;
+    opacity: 0;
+    transition: 0.3s;
+    &-active {
+      opacity: 1;
+      padding: 0 2px;
+    }
+  }
+  .custom_input {
+    width: 100%;
+    height: 46px;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #898989;
+    outline: none;
+    padding: 14px 20px;
+    font-family: "Raleway";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    &:focus {
+      border: 1px solid #446eda;
+    }
+  }
+}
+
+.checkbox_container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &-sign_up {
+    align-items: flex-start;
+  }
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+
+    &::after {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      background-image: url("../../src/svg/emptyCheckbox.svg");
+    }
+    &:checked {
+      &::after {
+        background-image: url("../../src/svg/checkedCheckbox.svg");
+      }
+    }
+  }
+  .checkbox_lable {
+    color: #0f0e0e;
+    font-family: "Raleway";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    max-width: 244px;
+    a {
+      color: #0f0e0e;
+    }
+  }
+}

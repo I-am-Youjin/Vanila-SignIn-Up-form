@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/scss/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <title>Form registration</title>
+  </head>
+  <body>
+    <div class="popup_container" id="popup_container">
+      <svg
+        class="cross"
+        id="popup_cross"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6 6L18 18"
+          stroke="#0F0E0E"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M18 6L6.00001 18"
+          stroke="#0F0E0E"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+      <div class="sign_up_sign_in_title_container" id="title_container">
+        <p class="title title-active" id="sign_in_title">Вход</p>
+        <p class="title" id="sign_up_title">Регистрация</p>
+      </div>
+      <div class="forms_container" id="forms_container">
+        <form class="form" action="" id="sign_in_form ">
+          <div class="input_container">
+            <label class="label" for="sign_in_email_input"
+              >Электронная почта</label
+            >
+            <input
+              id="sign_in_email_input"
+              type="email"
+              class="custom_input sign_in_input"
+              placeholder="Электронная почта"
+            />
+          </div>
+          <div class="input_container">
+            <label class="label" for="sign_in_password_input">Пароль</label>
+            <input
+              id="sign_in_password_input"
+              type="password"
+              class="custom_input sign_in_input"
+              placeholder="Пароль"
+            />
+          </div>
+          <div class="form_addicion">
+            <div class="checkbox_container">
+              <input id="sign_in_checkbox" type="checkbox" class="checkbox" />
+              <label class="checkbox_lable" for="sign_in_checkbox"
+                >Запомнить меня</label
+              >
+            </div>
+            <a class="reset_password_link" href="">Забыли пароль?</a>
+          </div>
+          <div id="sign_in_btn" class="btn">Войти</div>
+        </form>
+        <form class="form form_sign_up" action="" id="sign_up_form">
+          <div class="input_container">
+            <label class="label" for="sign_up_name_input">Имя</label>
+            <input
+              id="sign_up_name_input"
+              type="email"
+              class="custom_input sign_up_input"
+              placeholder="Имя"
+            />
+          </div>
+          <div class="input_container">
+            <label class="label" for="sign_up_phone_input">Телефон</label>
+            <input
+              id="sign_up_phone_input"
+              type="tel"
+              class="custom_input sign_up_input"
+              placeholder="Телефон"
+            />
+          </div>
+          <div class="input_container">
+            <label class="label" for="sign_up_email_input"
+              >Электронная почта</label
+            >
+            <input
+              id="sign_up_email_input"
+              type="email"
+              class="custom_input sign_up_input"
+              placeholder="Электронная почта"
+            />
+          </div>
+          <div class="input_container">
+            <label class="label" for="sign_up_password_input">Пароль</label>
+            <input
+              id="sign_up_password_input"
+              type="password"
+              class="custom_input sign_up_input"
+              placeholder="Пароль"
+            />
+          </div>
+          <div class="form_addicion-sign_up">
+            <div class="checkbox_container checkbox_container-sign_up">
+              <input
+                id="sign_up_checkbox_upper"
+                type="checkbox"
+                class="checkbox"
+              />
+              <label
+                class="checkbox_lable sign_up_checkbox"
+                for="sign_up_checkbox_upper"
+                >Я принимаю <a href="">пользовательское соглашение</a></label
+              >
+            </div>
+            <div class="checkbox_container checkbox_container-sign_up">
+              <input
+                id="sign_up_checkbox_lower"
+                type="checkbox"
+                class="checkbox"
+              />
+              <label
+                class="checkbox_lable sign_up_checkbox"
+                for="sign_up_checkbox_lower"
+                >Я даю свое согласие на сбор, обработку и хранение моих
+                персональных данных в соответствии с
+                <a href="">политикой оператора</a></label
+              >
+            </div>
+          </div>
+          <div id="sign_up_btn" class="btn">Зарегистрироваться</div>
+        </form>
+      </div>
+    </div>
+    <div class="popup_success" id="popup_success">
+      <svg
+        class="cross cross_success"
+        id="cross_success"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <path
+          d="M6 6L18 18"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M18 6L6.00001 18"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+      <svg
+        class="success_icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+      >
+        <path
+          d="M20 36.6667C29.1667 36.6667 36.6667 29.1667 36.6667 20C36.6667 10.8333 29.1667 3.33333 20 3.33333C10.8334 3.33333 3.33337 10.8333 3.33337 20C3.33337 29.1667 10.8334 36.6667 20 36.6667Z"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M12.9166 20L17.6333 24.7167L27.0833 15.2833"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <p class="success_text">Спасибо за регистрацию!</p>
+    </div>
+    <div id="open_popup_btn" class="btn open_popup_btn">Открыть</div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+@import "./customInputs";
+
+.popup_container {
+  width: 328px;
+  border-radius: 20px;
+  transition: 0.3s;
+  padding: 30px 30px 103px;
+  position: absolute;
+  top: -100%;
+  left: calc(50% - 164px);
+  background-color: #fff;
+  overflow: hidden;
+  max-height: 520px;
+  z-index: 2;
+  &-active {
+    max-height: 670px;
+  }
+  &-opened {
+    top: 25%;
+  }
+
+  .sign_up_sign_in_title_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 52px;
+    &-sign_up {
+      margin-bottom: 46px;
+    }
+
+    .title {
+      color: #898989;
+      font-family: "Raleway";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      position: relative;
+      cursor: pointer;
+      transition: 0.3s;
+      &::after {
+        width: 0;
+        position: absolute;
+        height: 2px;
+        background-color: #b80000;
+        bottom: -6px;
+        left: 0;
+        content: "";
+        transition: 0.3s;
+      }
+      &-active {
+        color: black;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .forms_container {
+    display: flex;
+    gap: 30px;
+    width: 566px;
+    justify-content: space-between;
+    transition: 0.3s;
+    &-active {
+      translate: calc(-50% - 15px);
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    max-width: 268px;
+    &-active {
+      translate: 0;
+    }
+  }
+
+  .form_sign_up {
+    gap: 14px;
+  }
+}
+
+.form_addicion {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  align-items: center;
+  &-sign_up {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+  .reset_password_link {
+    color: #898989;
+    text-align: center;
+    font-family: "Raleway";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  color: #fff;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  background: #b80000;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &.open_popup_btn {
+    width: 100px;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 25px);
+  }
+  &:hover {
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+  &:active {
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+  }
+}
+
+.popup_success {
+  position: absolute;
+  top: -100%;
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 290px;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: #b80000;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-opened {
+    top: calc(50% - 145px);
+  }
+  .success_text {
+    color: #fff;
+    text-align: center;
+    font-family: "Raleway";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .success_icon {
+    margin-bottom: 24px;
+  }
+}
+
+.cross {
+  position: relative;
+  left: calc(100% - 24px);
+  margin-bottom: 46px;
+  cursor: pointer;
+
+  &.cross_success {
+    left: calc(50% - 12px);
+    margin-bottom: 16px;
+  }
+}
